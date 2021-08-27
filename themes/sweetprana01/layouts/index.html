@@ -2,7 +2,7 @@
 
       <div>
         <h1>{{ with .Site.GetPage "/intro" }}{{ .Title }}{{ end }}</h1>
-        {{ with .Site.GetPage "/intro" }}{{ .Params.description }}{{ end }}
+        {{ with .Site.GetPage "/intro" }}{{ .Content }}{{ end }}
       </div>
 
       <div>

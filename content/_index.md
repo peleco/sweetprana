@@ -1,4 +1,4 @@
 ---
-title: "Homepage"
+title: "Sweet Prana"
 draft: false
 ---
