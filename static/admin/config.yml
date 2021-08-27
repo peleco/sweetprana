@@ -46,3 +46,13 @@ collections:
       - {label: "Draft", name: "draft", widget: "hidden", default: false}
       - {label: "Address", name: "address", widget: "string", required: true}
       - {label: "Location", name: "location", widget: "string", required: true}
+
+  - name: "pages" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Pages" # Used in the UI, ie.: "New Post"
+    folder: "content" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Draft", name: "draft", widget: "hidden", default: false}
+      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}

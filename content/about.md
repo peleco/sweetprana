@@ -1,6 +1,5 @@
 ---
 title: "About Sweet Prana"
-date: 2021-08-26T16:55:43-06:00
 draft: false
 ---
 
