@@ -8,7 +8,7 @@
       <div>
         {{ with .Site.GetPage "/weekly" }}{{ .Title }}{{ end }}
         {{ range where (where .Site.RegularPages "Section" "weekly") "Params.available" true }}
-          {{ .Render "product"}}
+          {{ partial "product" .}}
     		{{ end }}
       </div>
 
@@ -20,7 +20,7 @@
       <div>
         {{ with .Site.GetPage "/where" }}{{ .Title }}{{ end }}
         {{ range where .Site.RegularPages.ByTitle "Section" "where" }}
-          {{ .Render "retailer"}}
+          {{ partial "retailer" .}}
     		{{ end }}
       </div>
 
