@@ -1,6 +1,5 @@
 backend:
   name: github
-  repo: peleco/sweetprana # Path to your Github repository
   branch: master # Branch to update (master by default)
 
 media_folder: "static/images/products" # Media files will be stored in the repo under static/images/uploads
