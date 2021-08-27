@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: peleco/sweetprana # Path to your Github repository
+  branch: master # Branch to update (master by default)
+
+media_folder: "static/images/products" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/products" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - name: "weekly" # Used in routes, e.g., /admin/collections/blog
+    label: "Weekly" # Used in the UI
+    folder: "content/weekly" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Available", name: "available", widget: "boolean", default: false, required: true}
+      - {label: "Draft", name: "draft", widget: "hidden", default: false}
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - {label: "Price", name: "price", widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "string", required: true}
+
+  - name: "catalog" # Used in routes, e.g., /admin/collections/blog
+    label: "Catalog" # Used in the UI
+    folder: "content/catalog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Available", name: "available", widget: "boolean", default: false, required: true}
+      - {label: "Draft", name: "draft", widget: "hidden", default: false}
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - {label: "Price", name: "price", widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "string", required: true}
+
+  - name: "where" # Used in routes, e.g., /admin/collections/blog
+    label: "Where" # Used in the UI
+    folder: "content/where" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Active", name: "active", widget: "boolean", default: true, required: true}
+      - {label: "Draft", name: "draft", widget: "hidden", default: false}
+      - {label: "Address", name: "address", widget: "string", required: true}
+      - {label: "Location", name: "location", widget: "string", required: true}
+      
