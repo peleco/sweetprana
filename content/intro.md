@@ -1,5 +1,5 @@
 ---
-title: "Love yourself"
+title: Another way to treat yourself
 draft: false
 ---
 
