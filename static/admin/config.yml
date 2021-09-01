@@ -18,7 +18,8 @@ collections:
       - {label: "Draft", name: "draft", widget: "hidden", default: false}
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Price", name: "price", widget: "string", required: true}
-      - {label: "Description", name: "description", widget: "string", required: true}
+      #- {label: "Description", name: "description", widget: "string", required: true}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "catalog" # Used in routes, e.g., /admin/collections/blog
     label: "Catalog" # Used in the UI
@@ -32,7 +33,8 @@ collections:
       - {label: "Draft", name: "draft", widget: "hidden", default: false}
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Price", name: "price", widget: "string", required: true}
-      - {label: "Description", name: "description", widget: "string", required: true}
+      #- {label: "Description", name: "description", widget: "string", required: true}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "where" # Used in routes, e.g., /admin/collections/blog
     label: "Where" # Used in the UI
