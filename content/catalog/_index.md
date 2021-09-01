@@ -1,5 +1,5 @@
 ---
-title: "Catalog"
-date: "2021–08-26"
+title: "All the good stuff"
 draft: "false"
 ---
+Gluten free and vegan desserts from Tamarindo, Costa Rica.

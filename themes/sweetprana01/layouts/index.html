@@ -1,38 +1,55 @@
 {{ define "main" }}
-
-      <div>
+      <nav class="navigation">
+        <a href="#weekly">This week treats</a>
+        <a href="#about">About Sweet Prana</a>
+        <a href="#retailers">Where you can find us</a>
+        {{ partial "contact" .}}
+      </nav>
+      <div class="intro section">
         <h1>{{ with .Site.GetPage "/intro" }}{{ .Title }}{{ end }}</h1>
         {{ with .Site.GetPage "/intro" }}{{ .Content }}{{ end }}
       </div>
 
-      <div>
-        {{ with .Site.GetPage "/weekly" }}{{ .Title }}{{ end }}
-        {{ range where (where .Site.RegularPages "Section" "weekly") "Params.available" true }}
-          {{ partial "product" .}}
-    		{{ end }}
+      <div id="weekly" class="weekly section">
+        <h2>{{ with .Site.GetPage "/weekly" }}{{ .Title }}{{ end }}</h2>
+        <div class="how-it-works">
+          <p>How it works:</p>
+          <div class="how-it-works-steps">
+            <div class="steps-numbers">1</div><div class="steps">We take your orders from Monday AM to Wednesday PM  via Whatsapp, Facebook or Instagram.</div>
+            <div class="steps-numbers">2</div><div class="steps">We deliver on Fridays to all Tamarindo area.</div>
+            <div class="steps-numbers">3</div><div class="steps">Pay via SIMPE Móvil or with cash at delivery.</div>
+          </div>
+        </div>
+        <div class="product-list">
+          <div class="product-ill"><img src="/images/ill-moringa.png" alt=""></div>
+          {{ range where (where .Site.RegularPages "Section" "weekly") "Params.available" true }}
+            {{ partial "product" .}}
+      		{{ end }}
+        </div>
+        <div class="order">
+          <h3>Make your order via</h3>
+          {{ partial "contact" .}}
+          <p>Pay us with SIMPE Móvil or cash at delivery.</p>
+        </div>
       </div>
 
-      <div>
-        {{ with .Site.GetPage "/about" }}{{ .Title }}{{ end }}
+      <div class="catalog section">
+        <h2>Yes there is more!<br>Check out all our good stuff</h2>
+        <p>Check out our full catalog of healthy sweets, order as you like and you can pick it up or we can deliver it to your place in the Tamarindo area.</p>
+        <div class="button">
+          <a href="catalog/">Check the full Catalog</a>
+        </div>
+      </div>
+
+      <div id="about" class="about section">
+        <h2>{{ with .Site.GetPage "/about" }}{{ .Title }}{{ end }}</h2>
         {{ with .Site.GetPage "/about" }}{{ .Content }}{{ end }}
       </div>
 
-      <div>
-        {{ with .Site.GetPage "/where" }}{{ .Title }}{{ end }}
+      <div id="retailers" class="retailers section">
+        <h2>{{ with .Site.GetPage "/where" }}{{ .Title }}{{ end }}</h2>
         {{ range where .Site.RegularPages.ByTitle "Section" "where" }}
           {{ partial "retailer" .}}
     		{{ end }}
       </div>
-
-      <script>
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", user => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
-          });
-        }
-      </script>
 {{ end }}

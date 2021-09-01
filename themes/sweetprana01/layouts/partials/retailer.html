@@ -1,4 +1,9 @@
-<div>
-  <h2>{{ .Title }}</h2>
-  {{ .Params.address }}
+<div class="retailer-card">
+  <a href="{{ .Params.location }}" target="_blank">
+    <img src="/images/pin.svg" alt="Location">
+    <div class="retailer-info">
+      <h4>{{ .Title }}</h4>
+      <p>{{ .Params.address }}</p>
+    </div>
+  </a>
 </div>

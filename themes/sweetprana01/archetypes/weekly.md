@@ -5,4 +5,5 @@ draft: false
 available: true
 price: ""
 description: ""
+image: ""
 ---

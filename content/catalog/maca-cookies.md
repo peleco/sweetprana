@@ -5,4 +5,11 @@ draft: false
 available: true
 price: "₡20.000"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat a massa vitae risus eget purus augue consectetur. Semper pulvinar in donec metus, felis posuere maecenas aenean."
+image: "/images/products/chocolate-cake.jpg"
 ---
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat a massa vitae risus eget purus augue consectetur. Semper pulvinar in donec metus, felis posuere maecenas aenean.
+
+* Gluten free
+* Lactose free
+* Vegan
+* Processed sugar free (optional, ask when ordering)

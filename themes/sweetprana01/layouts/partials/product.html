@@ -1,5 +1,12 @@
-<div>
-  <h2>{{ .Title }}</h2>
-  {{ .Params.price }}
-  {{ .Params.description }}
+<div class="product-card">
+  <div class="card-image" style="background: url({{ .Params.image }}) no-repeat; background-size: cover; background-position: center;">
+		<!-- <img src="{{ .Params.image }}" alt="{{ .Title }}"> -->
+	</div>
+  <div class="card-content">
+    <header>
+      <h4>{{ .Title }}</h4>
+      {{ .Params.price }}
+    </header>
+    <p>{{ .Content }}</p>
+  </div>
 </div>
