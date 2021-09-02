@@ -2,3 +2,11 @@ baseURL = '/'
 languageCode = 'en-us'
 title = 'Sweet Prana – Gluten free and vegan desserts made with superfoods from Tamarindo, Costa Rica'
 theme = 'sweetprana01'
+
+[params]
+  title = 'Sweet Prana'
+  description = 'Gluten free and vegan desserts made with superfoods from Tamarindo, Costa Rica'
+  images = ['/images/site-feature-image.jpg']
+
+[taxonomies]
+  series = 'series'

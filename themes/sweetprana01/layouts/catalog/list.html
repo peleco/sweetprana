@@ -1,20 +1,20 @@
 {{ define "main" }}
-      <nav>
+      <nav class="navigation">
         <a href="../">Go back to our Home</a>
         {{ partial "contact" .}}
       </nav>
-      <div>
+      <div class="intro-catalog">
         <h1>{{ .Title }}</h1>
         {{ .Content }}
       </div>
 
-      <div>
+      <div class="section">
         {{ range where (where .Site.RegularPages "Section" "catalog") "Params.available" true }}
           {{ partial "product" .}}
     		{{ end }}
       </div>
 
-      <div>
+      <div class="retailers section">
         {{ with .Site.GetPage "/where" }}{{ .Title }}{{ end }}
         {{ range where .Site.RegularPages.ByTitle "Section" "where" }}
           {{ partial "retailer" .}}

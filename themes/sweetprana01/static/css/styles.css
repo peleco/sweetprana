@@ -198,7 +198,10 @@ a:link, a:visited {
   /* padding: 60px 0;
   border-bottom: 1px solid var(--firefly); */
 }
-.intro p {
+.intro-catalog {
+  padding-top: 60px;
+}
+.intro p, .intro-catalog p {
   /* font-size: 1.25em; */
   margin-top: 40px;
   line-height: 1.5em;
