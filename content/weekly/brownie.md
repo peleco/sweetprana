@@ -1,7 +1,7 @@
 ---
 title: Brownie Pie
 date: 2021-08-26T10:56:00-06:00
-available: false
+available: true
 draft: false
 image: /images/products/chocolate-cake.jpg
 price: ₡2.200 / piece

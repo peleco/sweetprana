@@ -2,6 +2,7 @@
 :root {
  --firefly: #13343F;
  --shilo: #EDBEB1;
+ --firefly-hover: #18414E;
 }
 
 /* ——————————————————————— General */
@@ -44,6 +45,28 @@ h4 {
   margin: 0;
   padding: 0;
 }
+@media only screen and (max-width: 64em) { /* -1024 */
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 42.5em) { /* -680px */
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+}
 a:link, a:visited {
   text-decoration: none;
   color: var(--firefly);
@@ -83,7 +106,26 @@ a:link, a:visited {
   width: 100%;
 }
 .content {
-  grid-column: 3 / span 11;
+  grid-column: 3 / span 10;
+}
+@media only screen and (max-width: 56.25em) { /* -1024 */
+  .content {
+    grid-column: 1 / span 13;
+  }
+  .header-logo {
+    position: relative;
+    grid-column: 1 / span 2;
+  }
+}
+@media only screen and (max-width: 48em) { /* -768 */
+  .header-logo {
+    grid-column: 1 / span 3;
+  }
+}
+@media only screen and (max-width: 31.25em) { /* -500 */
+  .header-logo {
+    grid-column: 1 / span 5;
+  }
 }
 .footer {
   grid-column: 3 / span 11;
@@ -129,6 +171,16 @@ a:link, a:visited {
 .navigation .contact img {
   width: 30px;
   /* display: inline-block; */
+}
+@media only screen and (max-width: 56.25em) { /* -1024 */
+  .navigation {
+    grid-column: 3 / span 10;
+    border-bottom: none;
+    display: none;
+  }
+  .navigation .anchor {
+    display: none;
+  }
 }
 .intro {
   /* padding: 60px 0;
@@ -213,6 +265,19 @@ a:link, a:visited {
   /* margin: 0;
   padding: 0; */
 }
+@media only screen and (max-width: 43.75em) { /* -700 */
+  .product-card {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .card-image {
+    grid-column: 1 / span 10;
+  }
+  .card-content {
+    grid-column: 1 / span 10;
+    padding: 30px;
+  }
+}
 /* .product-list {
   background-image: url("/images/ill-moringa.png");
   background-repeat: no-repeat;
@@ -222,6 +287,11 @@ a:link, a:visited {
   position: absolute;
   z-index: 5;
   left: -15%;
+}
+@media only screen and (max-width: 48em) { /* -1024 */
+  .product-ill {
+    display: none;
+  }
 }
 .order {
   text-align: center;
@@ -242,15 +312,17 @@ a:link, a:visited {
 .order li:last-child  {
   margin-right: 0;
 }
-.button {
+.button a {
   display: inline-block;
   background-color: var(--firefly);
   /* color: var(--shilo); */
   padding: 15px 30px;
   margin-top: 10px;
-}
-.button a {
   color: var(--shilo);
+  transition: all 0.3s;
+}
+.button a:hover {
+  background-color: var(--firefly-hover);
 }
 .retailer-card {
   margin-top: 40px;
