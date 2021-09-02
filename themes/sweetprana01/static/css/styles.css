@@ -75,6 +75,11 @@ a:link, a:visited {
   padding: 60px 0;
   border-bottom: 1px solid var(--firefly);
 }
+@media only screen and (max-width: 31.25em) { /* -500 */
+  .section {
+    padding: 30px 0;
+  }
+}
 
 /* ——————————————————————— Layout */
 .container {
@@ -108,8 +113,11 @@ a:link, a:visited {
 .content {
   grid-column: 3 / span 10;
 }
+.footer {
+  grid-column: 3 / span 11;
+}
 @media only screen and (max-width: 56.25em) { /* -1024 */
-  .content {
+  .content, .footer{
     grid-column: 1 / span 13;
   }
   .header-logo {
@@ -123,13 +131,17 @@ a:link, a:visited {
   }
 }
 @media only screen and (max-width: 31.25em) { /* -500 */
+  .container {
+    padding: 0 15px;
+  }
+  .grid {
+    grid-column-gap: 15px;
+  }
   .header-logo {
     grid-column: 1 / span 5;
   }
 }
-.footer {
-  grid-column: 3 / span 11;
-}
+
 
 /* ——————————————————————— Index */
 .navigation {
@@ -243,12 +255,11 @@ a:link, a:visited {
   background-size: contain;
   /* height: 50%; */
 }
-.card-image img {
+/* .card-image img {
   width: 100%;
-  /* height: 20%; */
   display: block;
   object-fit: cover;
-}
+} */
 .card-content {
   grid-column: 5 / span 6;
   padding: 30px 30px 30px 0;
@@ -268,7 +279,8 @@ a:link, a:visited {
 @media only screen and (max-width: 43.75em) { /* -700 */
   .product-card {
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-template-rows: 0.85fr 1fr;
   }
   .card-image {
     grid-column: 1 / span 10;
@@ -276,6 +288,20 @@ a:link, a:visited {
   .card-content {
     grid-column: 1 / span 10;
     padding: 30px;
+  }
+}
+@media only screen and (max-width: 31.25em) { /* -500 */
+  .card-image {
+    /* width: 50px; */
+    /* height: 50%; */
+    /* display: inline-block; */
+  }
+  .product-card {
+    /* grid-template-columns: repeat(10, 1fr); */
+    grid-template-rows: 0.75fr 1fr;
+  }
+  .card-content {
+    padding: 15px;
   }
 }
 /* .product-list {
@@ -364,4 +390,7 @@ a:link, a:visited {
 }
 .footer p {
   font-size: 0.8em;
+}
+@media only screen and (max-width: 56.25em) { /* -1024 */
+
 }
